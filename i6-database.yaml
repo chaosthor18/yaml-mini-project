@@ -15,7 +15,7 @@ spec:
         app: shift-sched
     spec:
       containers:
-      - name: shift-sched
+      - name: shift
         image: rcasaljay/shift-sched:latest
         imagePullPolicy: Always
         ports:
