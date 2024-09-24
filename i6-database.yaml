@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shift-sched-deployment
+  labels:
+    app: shift-sched
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shift-sched
+  template:
+    metadata:
+      labels:
+        app: shift-sched
+    spec:
+      containers:
+      - name: 
+        image: rcasaljay/shift-sched:latest
+        ports:
+        - containerPort: 8080
